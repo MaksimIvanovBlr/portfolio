@@ -10,9 +10,9 @@ const Projects = (props) => (
                 <h2 className="title-1">Projects</h2>
                 <ul className="projects">
 
-                    {projects.map((proj,index) => {
+                    {projects.map((proj) => {
                         return(
-                            <Project key={index} title = {proj.title} description= {proj.description} image = {proj.image} imageBig={proj.imageBig} gitHub={proj.gitHub}/>
+                            <Project key={proj.id} title = {proj.title} description= {proj.description} image = {proj.image} imageBig={proj.imageBig} gitHub={proj.gitHub}/>
                         )
                     })}
 

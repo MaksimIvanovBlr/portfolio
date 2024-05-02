@@ -7,6 +7,7 @@ import image3Big from "./../img/projects/03-big.jpg"
 
 const projects = [
     {
+        id: 1,
         title:'project1',
         description: 'some description1',
         image: image1,
@@ -14,6 +15,7 @@ const projects = [
         gitHub: 'https://github.com/MaksimIvanovBlr',
     },
     {
+        id: 2,
         title:'project2',
         description: 'some description2',
         image: image2,
@@ -21,6 +23,7 @@ const projects = [
         gitHub: 'https://github.com/MaksimIvanovBlr',
     },
     {
+        id: 3,
         title:'project3',
         description: 'some description3',
         image: image3,
