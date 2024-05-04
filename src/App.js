@@ -6,16 +6,17 @@ import Projects from "./pages/Projects";
 import ProjectPage from "./pages/ProjectPage";
 import Contacts from "./pages/Contacts";
 
-import {BrowserRouter as Router, Routes, Route, ScrollRestoration} from "react-router-dom";
-import scrollToTop from "./utils/scrollToTop"
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import ScrollToTop from "./utils/scrollToTop"
 
 function App() {
   return (
     <div className="App">
         <Router>
+            <ScrollToTop />
             <Navbar />
             <Routes>
-                <ScrollRestoration />
+
                 <Route path="/" element={<Home />} />
                 <Route path="/project" element={<ProjectPage />} />
                 <Route path="/projects" element={<Projects />} />
