@@ -12,7 +12,15 @@ const Projects = (props) => (
 
                     {projects.map((proj) => {
                         return(
-                            <Project key={proj.id} title = {proj.title} description= {proj.description} image = {proj.image} imageBig={proj.imageBig} gitHub={proj.gitHub}/>
+                            <Project
+                                key={proj.id}
+                                title = {proj.title}
+                                description= {proj.description}
+                                image = {proj.image}
+                                imageBig={proj.imageBig}
+                                gitHub={proj.gitHub}
+                                index = {proj.id}
+                            />
                         )
                     })}
 

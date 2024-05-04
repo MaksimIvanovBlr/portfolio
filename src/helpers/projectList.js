@@ -12,7 +12,7 @@ const projects = [
         description: 'some description1',
         image: image1,
         imageBig: image1Big,
-        gitHub: 'https://github.com/MaksimIvanovBlr',
+        // gitHub: 'https://github.com/MaksimIvanovBlr',
     },
     {
         id: 2,
