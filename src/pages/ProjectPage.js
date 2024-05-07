@@ -1,7 +1,7 @@
 import React from 'react';
 import {useParams} from "react-router-dom"
 import BtnGitHub from "../components/btnGitHub/BtnGitHub";
-import {projects} from "../helpers/projectList"
+import {projects} from "../storage/projectList"
 
 const ProjectPage = (props) => {
     const {id} = useParams()

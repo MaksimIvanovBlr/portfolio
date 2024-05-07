@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Project from "../components/project/Project";
-import {projects} from "../helpers/projectList";
+import {projects} from "../storage/projectList";
 
 const Projects = (props) => (
     <>
