@@ -17,7 +17,8 @@ const mySelf =
             email:'ivanov.maksim.blr@gmail.com',
             emailLink:'mailto:ivanov.maksim.blr@gmail.com',
         },
-        moreInfo: 'some long text about my self'
+        moreInfo: 'some long text about my self',
+
 
 
     }

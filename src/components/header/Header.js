@@ -6,7 +6,7 @@ const Header = (props) => (
         <div className="header__wrapper">
             <h1 className="header__title">
                 <strong>Hi, my name is <em>Maksim</em></strong><br/>
-                a backend developer
+                I am a backend developer
             </h1>
             <div className="header__text">
                 <p>with passion for learning and creating.</p>
