@@ -1,16 +1,16 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
 import "./style.css"
-const Project = (props) => {
+import { useNavigate } from 'react-router-dom';
+import {PROJECT_PAGE_ROUTE} from "../../utils/consts";
 
+const Project = (props) => {
+    const navigate = useNavigate()
     return(
 
-        <NavLink to={`/project/${props.index}`}>
-        <li className="project">
+        <li onClick={() => navigate(PROJECT_PAGE_ROUTE + '/' + props.index)} className="project">
                 <img src={props.image} alt={props.title} className="project__img"/>
                 <h3 className="project__title">{props.title}</h3>
         </li>
-        </NavLink>
 )};
 
 export default Project;
