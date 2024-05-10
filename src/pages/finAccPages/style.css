@@ -1,0 +1,144 @@
+.main-page{
+    /*display: block;*/
+}
+.list-acc{
+    display: flex;
+    height: 48px;
+    padding: 12px 28px;
+
+    /*border-radius: 0px;*/
+    /*background-color: var(--accent);
+    color: var(--white);
+
+     */
+    background-color: gray;
+    color: black;
+    letter-spacing: 0.15px;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: opacity 0.2s ease-in;
+}
+.list-acc:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+.btnFin {
+    display: block;
+    height: 48px;
+    padding: 12px 48px;
+    text-align: center;
+    vertical-align: middle;
+    /*border-radius: 5px;*/
+    /*background-color: var(--accent);
+    color: var(--white);
+
+     */
+    background-color: yellow;
+    color: black;
+    letter-spacing: 0.15px;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: opacity 0.2s ease-in;
+}
+
+.btnFin:hover {
+    opacity: 0.8;
+}
+
+.btnFin:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Btn outline */
+
+.btnFin-outline {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+
+    height: 48px;
+    padding: 12px 20px;
+
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+
+    transition: opacity 0.2s ease-in;
+}
+
+.btnFin-outline:hover {
+    opacity: 0.8;
+}
+
+.btnFin-outline:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/*ok- button*/
+.ok {
+    display: block;
+    margin-left: auto;
+    height: 80%;
+    width: 10%;
+    /*padding: 10px 25px;*/
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50px;
+    /*background-color: var(--accent);
+    color: var(--white);
+
+     */
+    background-color: yellow;
+    color: black;
+    /*letter-spacing: 0.15px;*/
+    /*font-size: 16px;*/
+    /*font-weight: 500;*/
+
+    transition: opacity 0.2s ease-in;
+}
+
+.ok:hover {
+    opacity: 0.5;
+}
+
+.ok:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Btn outline */
+
+/*.ok-outline {*/
+/*    display: flex;*/
+/*    column-gap: 10px;*/
+/*    align-items: center;*/
+
+/*    height: 48px;*/
+/*    padding: 12px 20px;*/
+
+/*    border-radius: 5px;*/
+/*    border: 1px solid #000;*/
+/*    background-color: #fff;*/
+/*    color: #000;*/
+
+/*    transition: opacity 0.2s ease-in;*/
+/*}*/
+
+/*.ok-outline:hover {*/
+/*    opacity: 0.8;*/
+/*}*/
+
+/*.ok-outline:active {*/
+/*    position: relative;*/
+/*    top: 1px;*/
+/*}*/
