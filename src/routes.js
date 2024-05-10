@@ -5,17 +5,29 @@ import {
     LOGIN_ROUTE,
     REGISTRATION_ROUTE,
     HOME_ROUTE,
-    PROJECT_PAGE_ROUTE
+    PROJECT_PAGE_ROUTE, FIN_ACC_HOME_ROUTE, FIN_ACC_USER_SETTINGS_ROUTE
 } from "./utils/consts"
 import Home from "./pages/Home";
 import Contacts from "./pages/Contacts";
 import Projects from "./pages/Projects";
 import ProjectPage from "./pages/ProjectPage";
+import Admin from "./pages/finAccPages/Admin";
+import MainPage from "./pages/finAccPages/MainPage";
+import UserSettings from "./pages/finAccPages/UserSettings";
+import Auth from "./pages/finAccPages/Auth";
 
 export const authRouts = [
     {
         path: ADMIN_ROUTE,
-        Component: 'admin component'
+        Component: Admin
+    },
+    {
+        path: FIN_ACC_HOME_ROUTE,
+        Component: MainPage
+    },
+    {
+        path: FIN_ACC_USER_SETTINGS_ROUTE,
+        Component: UserSettings
     },
 
 ]
@@ -32,11 +44,11 @@ export const publicRouts = [
     },
     {
         path: LOGIN_ROUTE,
-        Component: 'auth'
+        Component: Auth
     },
     {
         path: REGISTRATION_ROUTE,
-        Component: 'registration'
+        Component: Auth
     },
     {
         path: PROJECT_PAGE_ROUTE + '/:id',

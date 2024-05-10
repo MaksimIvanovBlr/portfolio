@@ -5,7 +5,7 @@ import {HOME_ROUTE} from "../../utils/consts";
 // import { Context } from '../index';
 
 const AppRouter = () => {
-    const isAuth = false
+    const isAuth = true
     return (
         <Routes>
             {isAuth && authRouts.map(({path, Component}) =>
