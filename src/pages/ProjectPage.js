@@ -1,7 +1,7 @@
 import React from 'react';
 import {useParams} from "react-router-dom"
 import BtnGitHub from "../components/btnGitHub/BtnGitHub";
-import {projects} from "../storage/projectList"
+import {projects} from "../storage/portfolioStore/projectList"
 
 const ProjectPage = (props) => {
     const {id} = useParams()
@@ -20,6 +20,8 @@ const ProjectPage = (props) => {
 
                       <div className="project-details__desc">
                           <p>{project.description}</p>
+                          { project.projectLink &&
+                          <p><a href={project.projectLink}>open page of project</a></p>}
                       </div>
 
                   {project.gitHub && (<BtnGitHub link="https://github.com/MaksimIvanovBlr/portfolio"/>)}

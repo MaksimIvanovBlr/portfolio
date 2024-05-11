@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Project from "../components/project/Project";
-import {projects} from "../storage/projectList";
+import {projects} from "../storage/portfolioStore/projectList";
 
 const Projects = (props) => (
     <>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {mySelf} from "../storage/aboutMySelf";
+import {mySelf} from "../storage/portfolioStore/aboutMySelf";
 
 const Contacts = (props) => (
     <>

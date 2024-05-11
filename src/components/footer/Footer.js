@@ -3,7 +3,7 @@ import tg from "../../img/icons/tg.svg";
 import mail from "../../img/icons/mail.svg";
 import github from "../../img/icons/gitHub.svg";
 import linkedin from "../../img/icons/linkedIn.svg";
-import {mySelf} from "../../storage/aboutMySelf";
+import {mySelf} from "../../storage/portfolioStore/aboutMySelf";
 import "./style.css"
 
 
