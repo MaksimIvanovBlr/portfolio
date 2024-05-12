@@ -1,6 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './style.css'
+import {Context} from "../../index";
+import {dayToSalary} from "../../utils/finAppCalculation/dateCalculation";
+
+
 const MainPage = () => {
+const {user, userInfo, expenses, salary, additionalIncome} = useContext(Context)
+
+
+    const toSalary = dayToSalary(userInfo.salaryDay)
+
+
+
     return (
         <div className='main-page'>
 
@@ -9,10 +20,10 @@ const MainPage = () => {
             <a href="#!" className="btnFin">user settings </a>
             <ul>
                 <li className='list-acc'>
-                   Основной доход за месяц: 4000
+                   Основной доход за месяц: 1000000
                 </li>
                 <li className='list-acc'>
-                    Дней до зарплаты: 30
+                    Дней до зарплаты: {toSalary}
                 </li>
                 <li className='list-acc'>
                     На ежедневные расходы до конца месяца: 1000

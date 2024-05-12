@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserStore from "./storage/finStore/UserStore";
+import UserInfo from "./storage/finStore/UserInfo";
+import Expenses from "./storage/finStore/Expenses";
+import Salary from "./storage/finStore/Salary";
+import AdditionalIncome from "./storage/finStore/AdditionalIncome";
 
 
 export const Context = createContext(null)
@@ -12,6 +16,10 @@ root.render(
   <React.StrictMode>
       <Context.Provider value = {{
           user: new UserStore(),
+          userInfo: new UserInfo(),
+          expenses: new Expenses(),
+          salary: new Salary(),
+          additionalIncome: new AdditionalIncome()
 
       }} >
           <App />

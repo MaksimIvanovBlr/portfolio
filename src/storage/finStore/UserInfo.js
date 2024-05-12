@@ -7,7 +7,7 @@ export default class UserInfo {
         this._perMonth = 'perMonth'
         this._bufferMoney = 'bufferMoney'
         this._valuePerDay = 'value per day'
-        this._salaryDay = 'salary day'
+        this._salaryDay = 10
         this._realBalance = 'real balance'
         makeAutoObservable(this)
 }
