@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import './style.css'
 import {Context} from "../../index";
 import {dayToSalary} from "../../utils/finAppCalculation/dateCalculation";
+import {sumOfTrueValue} from "../../utils/finAppCalculation/simpleCalculation";
 
 
 const MainPage = () => {
@@ -9,18 +10,17 @@ const {user, userInfo, expenses, salary, additionalIncome} = useContext(Context)
 
 
     const toSalary = dayToSalary(userInfo.salaryDay)
-
-
+    const monthlyBasicIncome = sumOfTrueValue(salary.salary)
+    console.log(toSalary)
 
     return (
         <div className='main-page'>
-
+            <a href="#!" className="btnFin">user settings  </a>
             <a href="#!" className="btnFin">бюджет</a>
             <a href="#!" className="btnFin">дневной остаток</a>
-            <a href="#!" className="btnFin">user settings </a>
             <ul>
                 <li className='list-acc'>
-                   Основной доход за месяц: 1000000
+                   Основной доход за месяц: {monthlyBasicIncome}
                 </li>
                 <li className='list-acc'>
                     Дней до зарплаты: {toSalary}

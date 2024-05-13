@@ -8,7 +8,7 @@ export default  class Salary {
             {name:'secondSalary', value:200,status: false, date:'10.02.2024'},
             {name:'thirdSalary', value:300,status: false, date:'10.03.2024'},
             {name:'fourthSalary', value:400,status: true, date:'25.04.2024'},
-            {name:'fifthSalary', value:500,status: true, date:'10.05.2024'},
+            {name:'fifthSalary', value:501,status: true, date:'10.05.2024'},
         ]
         makeAutoObservable(this)
     }
