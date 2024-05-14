@@ -3,12 +3,12 @@ import {makeAutoObservable} from "mobx";
 export default class UserInfo {
     constructor() {
         this._userID = '1'
-        this._reservValue = 'reservvalue'
+        this._reservValue = 1555
         this._perMonth = 'perMonth'
-        this._bufferMoney = 'bufferMoney'
-        this._valuePerDay = 'value per day'
+        this._bufferMoney = 444
+        this._valuePerDay = 20
         this._salaryDay = 10
-        this._realBalance = 'real balance'
+        this._realBalance = 2750
         makeAutoObservable(this)
 }
     get userID(){

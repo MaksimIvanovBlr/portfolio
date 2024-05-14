@@ -9,5 +9,7 @@ export const PROJECT_PAGE_ROUTE = '/project'
 
 export const FIN_ACC_HOME_ROUTE = '/financial-accounting'
 export const FIN_ACC_USER_SETTINGS_ROUTE = FIN_ACC_HOME_ROUTE + '/user-settings'
+export const FIN_ACC_DAILY_ROUTE = FIN_ACC_HOME_ROUTE + '/daily'
+
 
 
