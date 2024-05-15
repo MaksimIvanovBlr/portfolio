@@ -7,7 +7,14 @@ import {
     predictedBalance,
     sumOfTrueOrFalseValue,
 } from "../../utils/finAppCalculation/simpleCalculation";
-import {FIN_ACC_DAILY_ROUTE, FIN_ACC_HOME_ROUTE, FIN_ACC_USER_SETTINGS_ROUTE} from "../../utils/consts";
+import {
+    FIN_ACC_DAILY_ROUTE,
+    FIN_ACC_HOME_ROUTE,
+    FIN_ACC_SALARY_LIST_ROUTE,
+    FIN_ACC_USER_SETTINGS_ROUTE
+} from "../../utils/consts";
+import NavbarFinAcc from "../../components/finAccComponents/NavbarFinAcc";
+import {NavLink} from "react-router-dom";
 
 
 const MainPage = () => {
@@ -27,13 +34,13 @@ const { userInfo, expenses, salary, additionalIncome } = useContext(Context)
 
     return (
         <div className='main-page'>
-            <a href= {FIN_ACC_USER_SETTINGS_ROUTE} className="btnFin">user settings  </a>
-            <a href={FIN_ACC_HOME_ROUTE} className="btnFin">бюджет</a>
-            <a href={FIN_ACC_DAILY_ROUTE} className="btnFin">дневной остаток</a>
+            <NavbarFinAcc />
             <ul>
+                <NavLink to={FIN_ACC_SALARY_LIST_ROUTE} state={'salary'}>
                 <li className='list-acc'>
-                   Основной доход за месяц: {monthlyBasicIncome}
+                     Основной доход за месяц: {monthlyBasicIncome}
                 </li>
+                </NavLink>
                 <li className='list-acc'>
                     Дней до зарплаты: {toSalary}
                 </li>

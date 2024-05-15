@@ -1,9 +1,10 @@
 import React from 'react';
+import NavbarFinAcc from "../../components/finAccComponents/NavbarFinAcc";
 
 const Daily = () => {
     return (
         <div>
-            daily
+            <NavbarFinAcc />
         </div>
     );
 };

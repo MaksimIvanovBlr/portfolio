@@ -5,7 +5,12 @@ import {
     LOGIN_ROUTE,
     REGISTRATION_ROUTE,
     HOME_ROUTE,
-    PROJECT_PAGE_ROUTE, FIN_ACC_HOME_ROUTE, FIN_ACC_USER_SETTINGS_ROUTE, FIN_ACC_DAILY_ROUTE
+    PROJECT_PAGE_ROUTE,
+    FIN_ACC_HOME_ROUTE,
+    FIN_ACC_USER_SETTINGS_ROUTE,
+    FIN_ACC_DAILY_ROUTE,
+    FIN_ACC_SALARY_LIST_ROUTE,
+    FIN_ACC_EXPENSES_LIST_ROUTE, FIN_ACC_ADDITIONAL_INCOME_LIST_ROUTE
 } from "./utils/consts"
 import Home from "./pages/Home";
 import Contacts from "./pages/Contacts";
@@ -16,6 +21,7 @@ import MainPage from "./pages/finAccPages/MainPage";
 import UserSettings from "./pages/finAccPages/UserSettings";
 import Auth from "./pages/finAccPages/Auth";
 import Daily from "./pages/finAccPages/Daily";
+import FinAppList from "./pages/finAccPages/FinAppList";
 
 export const authRouts = [
     {
@@ -33,6 +39,18 @@ export const authRouts = [
     {
         path: FIN_ACC_DAILY_ROUTE,
         Component: Daily
+    },
+    {
+        path: FIN_ACC_SALARY_LIST_ROUTE,
+        Component: FinAppList
+    },
+    {
+        path: FIN_ACC_EXPENSES_LIST_ROUTE,
+        Component: FinAppList
+    },
+    {
+        path: FIN_ACC_ADDITIONAL_INCOME_LIST_ROUTE,
+        Component: FinAppList
     },
 
 ]

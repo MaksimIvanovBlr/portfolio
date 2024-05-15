@@ -1,11 +1,10 @@
 import React from 'react';
+import NavbarFinAcc from "../../components/finAccComponents/NavbarFinAcc";
 
 const UserSettings = () => {
     return (
         <div>
-            <a href="#!" className="btnFin">бюджет</a>
-            <a href="#!" className="btnFin">дневной остаток</a>
-            <a href="#!" className="btnFin">user settings </a>
+            <NavbarFinAcc />
             <ul>
                 <li className='list-acc'>
                     Расходы
