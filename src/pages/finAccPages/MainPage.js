@@ -8,7 +8,8 @@ import {
     sumOfTrueOrFalseValue,
 } from "../../utils/finAppCalculation/simpleCalculation";
 import {
-    FIN_ACC_DAILY_ROUTE,
+    FIN_ACC_ADDITIONAL_INCOME_LIST_ROUTE,
+    FIN_ACC_DAILY_ROUTE, FIN_ACC_EXPENSES_LIST_ROUTE,
     FIN_ACC_HOME_ROUTE,
     FIN_ACC_SALARY_LIST_ROUTE,
     FIN_ACC_USER_SETTINGS_ROUTE
@@ -36,20 +37,26 @@ const { userInfo, expenses, salary, additionalIncome } = useContext(Context)
         <div className='main-page'>
             <NavbarFinAcc />
             <ul>
-                <NavLink to={FIN_ACC_SALARY_LIST_ROUTE} state={'salary'}>
+                <NavLink to={FIN_ACC_SALARY_LIST_ROUTE} >
                 <li className='list-acc'>
                      Основной доход за месяц: {monthlyBasicIncome}
                 </li>
                 </NavLink>
+
                 <li className='list-acc'>
                     Дней до зарплаты: {toSalary}
                 </li>
+
                 <li className='list-acc'>
                     На ежедневные расходы до конца месяца: {forMonth}
                 </li>
+
+                <NavLink to={FIN_ACC_EXPENSES_LIST_ROUTE}>
                 <li className='list-acc'>
                     Сумма не оплаченых платежей: {unpaidPayments}
                 </li>
+                </NavLink>
+
                 <li className='list-acc'>
                     Резерв: {userReservValue}
                 </li>
@@ -62,9 +69,13 @@ const { userInfo, expenses, salary, additionalIncome } = useContext(Context)
                 <li className='list-acc'>
                     Действительный баланс карты: {userInputBalanceValue}
                 </li>
+
+                <NavLink to={FIN_ACC_ADDITIONAL_INCOME_LIST_ROUTE}>
                 <li className='list-acc'>
                     Неиспользованые дополнительные доходы: {unusedAdditionalIncomes}
                 </li>
+                </NavLink>
+
                 <li className='list-acc'>
                     Реальный баланс карты: _______поле воода <p className='ok'>ok</p>
                 </li>

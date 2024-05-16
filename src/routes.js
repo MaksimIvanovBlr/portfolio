@@ -21,7 +21,9 @@ import MainPage from "./pages/finAccPages/MainPage";
 import UserSettings from "./pages/finAccPages/UserSettings";
 import Auth from "./pages/finAccPages/Auth";
 import Daily from "./pages/finAccPages/Daily";
-import FinAppList from "./pages/finAccPages/FinAppList";
+import SalaryListFinApp from "./pages/finAccPages/SalaryListFinApp";
+import ExpensesListFinApp from "./pages/finAccPages/ExpensesListFinApp";
+import AdditionalIncomeListFinApp from "./pages/finAccPages/AdditionalIncomeListFinApp";
 
 export const authRouts = [
     {
@@ -42,15 +44,15 @@ export const authRouts = [
     },
     {
         path: FIN_ACC_SALARY_LIST_ROUTE,
-        Component: FinAppList
+        Component: SalaryListFinApp
     },
     {
         path: FIN_ACC_EXPENSES_LIST_ROUTE,
-        Component: FinAppList
+        Component: ExpensesListFinApp
     },
     {
         path: FIN_ACC_ADDITIONAL_INCOME_LIST_ROUTE,
-        Component: FinAppList
+        Component: AdditionalIncomeListFinApp
     },
 
 ]

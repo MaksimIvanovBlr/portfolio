@@ -1,19 +1,20 @@
 import React from 'react';
 
 const ListFinAppComponent = (props) => {
+    let statusName = 'not active'
+    if(props.status === true){
+        statusName = 'active'
+    }
     return (
-        <ul>
-            {props.map((salary) =>{
-                return(
-                    <li>
-                        name: {salary.name}
-                        value: {salary.value}
-                        status: {salary.status}
-                        date: {salary.date}
-                    </li>
-                )
-            })}
-        </ul>
+        <li className='list-acc'>
+            {props.name} |
+            {props.value} |
+            {statusName} |
+
+            {props.date} |
+
+
+        </li>
     );
 };
 
