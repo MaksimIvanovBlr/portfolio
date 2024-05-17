@@ -63,7 +63,7 @@ export default class UserInfo {
 
 
     setRealBalance(realBalance){
-        this._reservValue = realBalance
+        this._realBalance = realBalance
     }
 
     get realBalance(){

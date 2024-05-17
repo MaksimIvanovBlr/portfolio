@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import './style.css'
 import {Context} from "../../index";
 import {dayToSalary} from "../../utils/finAppCalculation/dateCalculation";
@@ -9,18 +9,17 @@ import {
 } from "../../utils/finAppCalculation/simpleCalculation";
 import {
     FIN_ACC_ADDITIONAL_INCOME_LIST_ROUTE,
-    FIN_ACC_DAILY_ROUTE, FIN_ACC_EXPENSES_LIST_ROUTE,
-    FIN_ACC_HOME_ROUTE,
+    FIN_ACC_EXPENSES_LIST_ROUTE,
     FIN_ACC_SALARY_LIST_ROUTE,
     FIN_ACC_USER_SETTINGS_ROUTE
 } from "../../utils/consts";
 import NavbarFinAcc from "../../components/finAccComponents/NavbarFinAcc";
 import {NavLink} from "react-router-dom";
+import {observer} from "mobx-react-lite";
 
 
-const MainPage = () => {
-const { userInfo, expenses, salary, additionalIncome } = useContext(Context)
-
+const MainPage = observer(() => {
+    const { userInfo, expenses, salary, additionalIncome } = useContext(Context)
 
     const toSalary = dayToSalary(userInfo.salaryDay)
     const monthlyBasicIncome = sumOfTrueOrFalseValue(salary.salary, true)
@@ -31,6 +30,18 @@ const { userInfo, expenses, salary, additionalIncome } = useContext(Context)
     const userBufferMoney = userInfo.bufferMoney
     const  userPredictBalance = predictedBalance( forMonth, unpaidPayments,userReservValue, userBufferMoney, unusedAdditionalIncomes)
     const userInputBalanceValue = userInfo.realBalance
+
+    const [inputRealBalance, setInputRealBalance] = useState(userInfo.realBalance)
+    console.log(inputRealBalance, 'input')
+
+    const handleRealBalanceInput = (e) => {
+        setInputRealBalance(e.target.value)
+    }
+
+    const handleSave = () => {
+        userInfo.setRealBalance(inputRealBalance)
+        console.log(userInfo.realBalance, 'change')
+    }
 
 
     return (
@@ -43,13 +54,19 @@ const { userInfo, expenses, salary, additionalIncome } = useContext(Context)
                 </li>
                 </NavLink>
 
-                <li className='list-acc'>
-                    Дней до зарплаты: {toSalary}
-                </li>
+                <NavLink to={FIN_ACC_USER_SETTINGS_ROUTE}>
+                    <li className='list-acc'>
+                        Дней до зарплаты: {toSalary}
+                    </li>
+                </NavLink>
 
-                <li className='list-acc'>
-                    На ежедневные расходы до конца месяца: {forMonth}
-                </li>
+
+                <NavLink to={FIN_ACC_USER_SETTINGS_ROUTE}>
+                    <li className='list-acc'>
+                        На ежедневные расходы до конца месяца: {forMonth}
+                    </li>
+                </NavLink>
+
 
                 <NavLink to={FIN_ACC_EXPENSES_LIST_ROUTE}>
                 <li className='list-acc'>
@@ -57,17 +74,25 @@ const { userInfo, expenses, salary, additionalIncome } = useContext(Context)
                 </li>
                 </NavLink>
 
-                <li className='list-acc'>
-                    Резерв: {userReservValue}
-                </li>
-                <li className='list-acc'>
-                    "Буфферные деньги": {userBufferMoney}
-                </li>
+                <NavLink to={FIN_ACC_USER_SETTINGS_ROUTE}>
+                    <li className='list-acc'>
+                        Резерв: {userReservValue}
+                    </li>
+                </NavLink>
+
+                <NavLink to={FIN_ACC_USER_SETTINGS_ROUTE}>
+                    <li className='list-acc'>
+                        "Буфферные деньги": {userBufferMoney}
+                    </li>
+                </NavLink>
+
+
                 <li className='list-acc'>
                     Прогнозируемый остаток на карте: {userPredictBalance}
                 </li>
+
                 <li className='list-acc'>
-                    Действительный баланс карты: {userInputBalanceValue}
+                    Действительный баланс карты: {userInfo.realBalance}
                 </li>
 
                 <NavLink to={FIN_ACC_ADDITIONAL_INCOME_LIST_ROUTE}>
@@ -77,11 +102,19 @@ const { userInfo, expenses, salary, additionalIncome } = useContext(Context)
                 </NavLink>
 
                 <li className='list-acc'>
-                    Реальный баланс карты: _______поле воода <p className='ok'>ok</p>
+                    Введите баланс карты:
+                    <input
+                        className='input-value'
+                        type="number"
+                        value={inputRealBalance}
+                        onChange={handleRealBalanceInput}
+                        placeholder="Введите реальный баланс карты"
+                    />
+                    <p onClick={handleSave} className='ok'>ok</p>
                 </li>
             </ul>
         </div>
     );
-};
+});
 
 export default MainPage;

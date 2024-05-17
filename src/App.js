@@ -5,8 +5,9 @@ import Footer from "./components/footer/Footer";
 import { BrowserRouter} from "react-router-dom";
 import ScrollToTop from "./utils/scrollToTop"
 import AppRouter from "./components/appRouter/AppRouter";
+import {observer} from "mobx-react-lite";
 
-function App() {
+const App = observer( () => {
 
 
   return (
@@ -20,6 +21,6 @@ function App() {
 
       </div>
   );
-}
+})
 
 export default App;
