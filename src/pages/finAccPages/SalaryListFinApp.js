@@ -12,14 +12,17 @@ const SalaryListFinApp = () => {
             <ul>
                 {salary.salary.map((sal) =>{
                     return(
+
                         <ListFinAppComponent
                             key = {sal.index}
                             name = {sal.name}
                             value = {sal.value}
                             status = {sal.status}
                             date = {sal.date}
+                            type = 'salary'
                         />
                     )
+
                 })}
 
             </ul>

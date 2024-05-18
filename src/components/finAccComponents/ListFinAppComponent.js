@@ -6,15 +6,16 @@ const ListFinAppComponent = (props) => {
         statusName = 'active'
     }
     return (
-        <li className='list-acc'>
-            {props.name} |
-            {props.value} |
-            {statusName} |
+            <li className='list-acc'>
+                {props.name} |
+                {props.value} |
+                {statusName} |
+                {props.date} |
+                {props.type}
+                <p className='ok'>edit/detail</p>
+            </li>
 
-            {props.date} |
 
-
-        </li>
     );
 };
 

@@ -32,7 +32,7 @@ const MainPage = observer(() => {
     const userInputBalanceValue = userInfo.realBalance
 
     const [inputRealBalance, setInputRealBalance] = useState(userInfo.realBalance)
-    console.log(inputRealBalance, 'input')
+
 
     const handleRealBalanceInput = (e) => {
         setInputRealBalance(e.target.value)
@@ -40,7 +40,7 @@ const MainPage = observer(() => {
 
     const handleSave = () => {
         userInfo.setRealBalance(inputRealBalance)
-        console.log(userInfo.realBalance, 'change')
+
     }
 
 
